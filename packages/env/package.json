@@ -1,0 +1,27 @@
+{
+  "name": "@repo/env",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@repo/utils": "workspace:*",
+    "@t3-oss/env-core": "^0.13.11"
+  },
+  "devDependencies": {
+    "@repo/esconfig": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
+    "vite": "^8.0.3"
+  },
+  "exports": {
+    "./server": {
+      "types": "./src/server.ts",
+      "default": "./src/server.ts"
+    },
+    "./client": {
+      "types": "./src/client.ts",
+      "default": "./src/client.ts"
+    }
+  }
+}

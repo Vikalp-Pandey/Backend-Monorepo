@@ -1,0 +1,52 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "material-icon-theme.folders.associations": {
+    "ai": "src-tauri",
+    "esconfig": "proto",
+    "tsconfig": "typescript",
+    "betterauth": "ngrx-entities",
+    "dashboard": "command",
+    "(dashboard)": "command",
+    "(routes)": "routes",
+    "(auth)": "secure",
+    "(home)": "home"
+  },
+  "material-icon-theme.files.associations": {},
+  "material-icon-theme.files.customClones": [
+    {
+      "name": "server-utils",
+      "base": "utils",
+      "color": "amber-500",
+      "folderNames": ["server-utils"]
+    },
+    {
+      "name": "user",
+      "base": "admin",
+      "color": "blue-500",
+      "folderNames": ["user", "users"]
+    }
+  ],
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "eslint.useFlatConfig": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  }
+}

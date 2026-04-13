@@ -1,0 +1,33 @@
+{
+  "name": "@services/email",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-email/components": "^1.0.11",
+    "@react-email/render": "^2.0.5",
+    "nodemailer": "^8.0.4"
+  },
+  "peerDependencies": {
+    "react": "^19.2.4"
+  },
+  "devDependencies": {
+    "@repo/esconfig": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
+    "@types/nodemailer": "^7.0.11",
+    "@types/react": "^19.2.14"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./types": {
+      "types": "./src/types.ts",
+      "default": "./src/types.ts"
+    }
+  }
+}

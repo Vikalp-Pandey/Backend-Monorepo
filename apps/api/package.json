@@ -1,0 +1,26 @@
+{
+  "name": "@repo/api",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch --env-file=../../.env.development.local src/node.ts",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.12",
+    "@hono/zod-validator": "^0.7.6",
+    "@repo/env": "workspace:*",
+    "@repo/server-utils": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "@services/email": "workspace:*",
+    "axios": "^1.14.0",
+    "dotenv": "^17.4.0",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.10"
+  },
+  "devDependencies": {
+    "@repo/esconfig": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
+    "tsx": "^4.21.0"
+  }
+}

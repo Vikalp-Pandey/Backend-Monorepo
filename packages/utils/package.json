@@ -1,0 +1,22 @@
+{
+  "name": "@repo/utils",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@repo/esconfig": "workspace:*",
+    "@repo/tsconfig": "workspace:*"
+  },
+  "exports": {
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./src/*.ts"
+    }
+  }
+}

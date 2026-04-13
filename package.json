@@ -1,0 +1,41 @@
+{
+  "name": "backend_monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "add:api": "pnpm --filter api add",
+    "add:email":"pnpm --filter email add",
+    "add:utils":"pnpm --filter utils add",
+    "add:env":"pnpm --filter env add",
+    "add:esconfig":"pnpm --filter esconfig add",
+    "add:server-utils":"pnpm --filter server-utils add",
+    "add:tsconfig":"pnpm --filter tsconfig add"
+  },
+  "dependencies": {
+    "sst": "4.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.5.2",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "turbo": "^2.9.3",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.58.0"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=20"
+  }
+}

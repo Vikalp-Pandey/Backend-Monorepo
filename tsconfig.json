@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/env"
+    },
+    {
+      "path": "./packages/utils"
+    },
+    {
+      "path": "./services/email"
+    }
+  ]
+}

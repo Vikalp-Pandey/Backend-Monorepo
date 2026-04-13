@@ -1,0 +1,16 @@
+{
+  "extends": "@repo/tsconfig/node.json",
+
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    "outDir": "dist",
+    "rootDir": "src",
+    "jsx": "react-jsx"
+  },
+
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
