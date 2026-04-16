@@ -2,7 +2,7 @@ interface EmailVerification {
   type: 'emailVerification';
   data: {
     name: string;
-    url: string;
+    otp: string;
   };
 }
 

@@ -1,0 +1,17 @@
+{
+  "extends": "@repo/tsconfig/node.json",
+
+  "compilerOptions": {
+    "outDir": "dist",
+    "composite": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths":{
+       "@db/*": ["./src/*"],
+    }
+  },
+  "include": ["src/**/*"],
+
+  "exclude": ["node_modules", "dist"]
+}

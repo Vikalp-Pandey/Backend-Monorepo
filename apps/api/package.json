@@ -2,7 +2,7 @@
   "name": "@repo/api",
   "type": "module",
   "scripts": {
-    "start":"tsx watch --env-file=../../.env.development.local src/node.ts",
+    "start": "tsx watch --env-file=../../.env.development.local src/node.ts",
     "build": "tsc",
     "dev": "tsx watch --env-file=../../.env.development.local src/node.ts",
     "lint": "eslint ."
@@ -10,6 +10,8 @@
   "dependencies": {
     "@hono/node-server": "^1.19.12",
     "@hono/zod-validator": "^0.7.6",
+    "@repo/auth": "workspace:*",
+    "@repo/db": "workspace:*",
     "@repo/env": "workspace:*",
     "@repo/server-utils": "workspace:*",
     "@repo/utils": "workspace:*",

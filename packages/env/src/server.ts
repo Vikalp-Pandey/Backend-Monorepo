@@ -27,7 +27,7 @@ export const env = createEnv({
     
     // COOKIE_DOMAIN: z.string(),
     /** App URLs */
-    // API_URL: z.url(),
+    JWT_SECRET:z.string()
   },
 
   runtimeEnv: process.env,

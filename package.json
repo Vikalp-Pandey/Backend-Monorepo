@@ -11,6 +11,8 @@
     "add:email":"pnpm --filter email add",
     "add:utils":"pnpm --filter utils add",
     "add:env":"pnpm --filter env add",
+    "add:auth":"pnpm --filter auth add",
+    "add:db":"pnpm --filter db add",
     "add:esconfig":"pnpm --filter esconfig add",
     "add:server-utils":"pnpm --filter server-utils add",
     "add:tsconfig":"pnpm --filter tsconfig add"

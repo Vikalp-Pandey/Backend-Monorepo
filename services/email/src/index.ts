@@ -4,8 +4,8 @@ import { createTransport } from 'nodemailer';
 
 // Templates
 import {
-  AccountApproved,
-  AccountCreated,
+  // AccountApproved,
+  // AccountCreated,
   EmailVerification,
   ResetPassword,
 } from './templates/auth.templates';
@@ -49,10 +49,10 @@ export default class EmailService {
         return await render(EmailVerification(template.data));
       case 'resetPassword':
         return await render(ResetPassword(template.data));
-      case 'accountApproved':
-        return await render(AccountApproved(template.data));
-      case 'accountCreated':
-        return await render(AccountCreated(template.data));
+      // case 'accountApproved':
+      //   return await render(AccountApproved(template.data));
+      // case 'accountCreated':
+      //   return await render(AccountCreated(template.data));
     }
   }
 

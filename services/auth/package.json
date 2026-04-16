@@ -1,0 +1,26 @@
+{
+  "name": "@repo/auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.30.3",
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@types/bcrypt": "^6.0.0"
+  },
+  "dependencies": {
+    "@repo/db": "workspace:*",
+    "@repo/env": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "@services/email": "workspace:*",
+    "bcrypt": "^6.0.0",
+    "hono": "^4.12.10"
+  }
+}

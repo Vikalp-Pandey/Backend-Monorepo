@@ -1,0 +1,34 @@
+{
+  "name": "@repo/db",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    "./adapter": {
+      "types": "./src/adapters/adapter.ts",
+      "import": "./src/adapters/adapter.ts",
+      "default": "./src/adapters/adapter.ts"
+    },
+    "./db": {
+      "types": "./src/db/db.ts",
+      "import": "./src/db/db.ts",
+      "default": "./src/db/db.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.30.3",
+  "dependencies": {
+    "@repo/env": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "mongodb": "^7.1.1",
+    "mongoose": "^9.4.1"
+  }
+}
