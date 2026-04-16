@@ -16,7 +16,7 @@ export const signjwt = async (data:Input)=>{
 }
 
 export const verifyjwt = async (token:string)=>{
-  const payload =  jwt.verify(token,env.JWT_SECRET)
+  const payload =  jwt.verify(token,env.JWT_SECRET) as PayloadSchema;
   return payload
 }
 
@@ -26,4 +26,9 @@ export const verifyjwt = async (token:string)=>{
 //   return newToken;
 // }
 
+export const generateResetLink = async (email:string)=>{
+  const token = await signjwt({payload:{id:email}});
+  const reset_link = `${env.ALLOWED_ORIGINS}/reset-password?token=${token}`;
+  return {token,reset_link}
+}
 

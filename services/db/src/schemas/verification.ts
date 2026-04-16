@@ -5,6 +5,7 @@ export interface verificationSchema {
     email:string,
     otp?:string,
     resetLink?:string,
+    token?:string,
     createdAt:Date
 }
 
@@ -28,10 +29,14 @@ export const VerificationSchema = new Schema<verificationSchema>({
         type: String,
         required: false
     },
+    token: {
+        type: String,
+        required: false
+    },
     createdAt:{
         type:Date,
         default:Date.now,
-        // expires: 300 // TTL
+        expires: 300 // TTL
     }
 },
 {
