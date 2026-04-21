@@ -8,5 +8,5 @@ export const env = createEnv({
     VITE_API_URL: z.string(),
   },
 
-  runtimeEnv: import.meta.env,
+  runtimeEnv: (import.meta as any).env,
 });
