@@ -4,14 +4,13 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "@repo/auth":["../../services/auth/src/index.ts"],
-      "@repo/utils":["../../packages/utils/src/index.ts"],
-      "@repo/env":["../../packages/env/src/index.ts"],
-      "@repo/server-utils":["../../packages/server-utils/src/index.ts"],
-      "@repo/db":["../../packages/db/src/index.ts"],
-      "@repo/db/adapter":["../../packages/db/src/adapters/adapter.ts"],
-      "@repo/db/db":["../../packages/db/src/db/db.ts"],
-      "@repo/db/utils":["../../packages/db/src/utils/utils.ts"]
+      // "@repo/auth":["../../services/auth/src/index.ts"],
+      // "@repo/utils":["../../packages/utils/src/index.ts"],
+      // "@repo/env":["../../packages/env/src/index.ts"],
+      // "@repo/server-utils":["../../packages/server-utils/src/index.ts"],
+      // // "@repo/db":["../../packages/db/src/index.ts"],
+      // "@repo/db/adapter":["../../packages/db/src/adapters/adapter.ts"],
+      // "@repo/db/db":["../../packages/db/src/db/db.ts"],
     },
 
     "outDir": "dist",

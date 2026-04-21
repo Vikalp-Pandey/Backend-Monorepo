@@ -8,6 +8,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "add:api": "pnpm --filter api add",
+    "add:ui": "pnpm --filter ui add",
     "add:email":"pnpm --filter email add",
     "add:utils":"pnpm --filter utils add",
     "add:env":"pnpm --filter env add",

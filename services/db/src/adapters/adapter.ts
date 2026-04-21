@@ -1,8 +1,9 @@
-import { MongoClient, Db, ObjectId } from 'mongodb';
-import { withTimestamps } from '@repo/utils/db';
-import { Verification } from '../schemas/verification';
+import User from '@repo/db/schemas/user';
+import { Verification } from '@repo/db/schemas/verification';
+import { MongoClient, Db } from 'mongodb';
+// import { Verification } from '@db/schemas/verification';
 import mongoose from 'mongoose';
-import { env } from 'node:process';
+// import User from 'db/schemas/user';
 
 let client: MongoClient | null = null;
 let cachedDb: Db | null = null;
@@ -20,21 +21,18 @@ export async function getDatabase(url: string): Promise<Db> {
 }
 
 export const createDbAdapter = (db: Db, url:string) => {
-  const Users = db.collection('users');
-  // const Verification = db.collection('verification');
-
   mongoose.connect(url);
   // console.log("Database connected successfully");
   return {
     getUserByEmail: (email: string) => {
-      return Users.findOne({ email });
+      // exec() is used to execute the query. If exec() is not used, it will return a mongoose Query object which is thenable but not a promise
+      return User.findOne({ email }).exec();
     },
     getUserById: (id: string) => {
-      return Users.findOne({ _id: new ObjectId(id) });
+      return User.findById(id).exec();
     },
-    createUser: (email: string, password: string) => {
-      const userData = withTimestamps({ email, password })
-      return Users.insertOne(userData);
+    createUser: (name:string, email: string, password?: string) => {
+      return User.create({name,email,password});
     },
 
     // 
@@ -43,9 +41,8 @@ export const createDbAdapter = (db: Db, url:string) => {
         email, otp, type: 'otp'
       }
 
-      await mongoose.connect(env.DATABASE_URL!)
       const resultOtp = await Verification.create(data);
-      // console.log(resultOtp)
+      return resultOtp
     },
 
     verifyOtp: async (email:string, otp: string) => {

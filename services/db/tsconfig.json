@@ -8,7 +8,7 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths":{
-       "@db/*": ["./src/*"],
+       "@repo/db/*": ["./src/*"],
     }
   },
   "include": ["src/**/*"],

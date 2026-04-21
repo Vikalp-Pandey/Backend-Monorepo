@@ -15,7 +15,23 @@
       "types": "./src/db/db.ts",
       "import": "./src/db/db.ts",
       "default": "./src/db/db.ts"
+    },
+    "./utils": {
+      "types": "./src/utils/utils.ts",
+      "import": "./src/utils/utils.ts",
+      "default": "./src/utils/utils.ts"
+    },
+    "./schemas/user": {
+      "types": "./src/schemas/user.ts",
+      "import": "./src/schemas/user.ts",
+      "default": "./src/schemas/user.ts"
+    },
+    "./schemas/verification": {
+      "types": "./src/schemas/verification.ts",
+      "import": "./src/schemas/verification.ts",
+      "default": "./src/schemas/verification.ts"
     }
+
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

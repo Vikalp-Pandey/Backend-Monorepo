@@ -2,7 +2,9 @@ import { env } from "@repo/env/server";
 import jwt from "jsonwebtoken";
 
 export interface PayloadSchema{
-  id:string
+  id?:string,
+  name?:string,
+  email?:string
 };
 
 export interface Input{

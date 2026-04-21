@@ -8,7 +8,7 @@ export const signin = (db:DbAdapter)=>{
   return async (c:Context)=>{
       const {email,password}= await c.req.json();
       const user = await db.getUserByEmail(email);
-      const isPasswordValid = await bcrypt.compare(password,user?.password);
+      const isPasswordValid = await bcrypt.compare(password,user?.password!);
       if(!isPasswordValid){
         return c.json({message:"Invalid Password"})
       }
