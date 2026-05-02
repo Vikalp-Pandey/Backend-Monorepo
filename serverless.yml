@@ -1,6 +1,6 @@
 service: storex-api
 
-frameworkVersion: "3"
+frameworkVersion: "4"
 
 plugins:
   - serverless-dotenv-plugin

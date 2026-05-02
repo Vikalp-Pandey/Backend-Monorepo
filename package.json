@@ -2,23 +2,24 @@
   "name": "backend_monorepo",
   "private": true,
   "scripts": {
-    "start":"turbo run start",
+    "start": "turbo run start",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "add:api": "pnpm --filter api add",
     "add:ui": "pnpm --filter ui add",
-    "add:email":"pnpm --filter email add",
-    "add:utils":"pnpm --filter utils add",
-    "add:env":"pnpm --filter env add",
-    "add:auth":"pnpm --filter auth add",
-    "add:db":"pnpm --filter db add",
-    "add:esconfig":"pnpm --filter esconfig add",
-    "add:server-utils":"pnpm --filter server-utils add",
-    "add:tsconfig":"pnpm --filter tsconfig add"
+    "add:email": "pnpm --filter email add",
+    "add:utils": "pnpm --filter utils add",
+    "add:env": "pnpm --filter env add",
+    "add:auth": "pnpm --filter auth add",
+    "add:db": "pnpm --filter db add",
+    "add:esconfig": "pnpm --filter esconfig add",
+    "add:server-utils": "pnpm --filter server-utils add",
+    "add:tsconfig": "pnpm --filter tsconfig add"
   },
   "dependencies": {
+    "serverless": "^4.35.0",
     "sst": "4.3.0"
   },
   "devDependencies": {
