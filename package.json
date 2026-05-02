@@ -19,7 +19,7 @@
     "add:tsconfig": "pnpm --filter tsconfig add"
   },
   "dependencies": {
-    "serverless": "^4.35.0",
+    "serverless": "^3.40.0",
     "sst": "4.3.0"
   },
   "devDependencies": {
