@@ -16,7 +16,11 @@
     "add:db": "pnpm --filter db add",
     "add:esconfig": "pnpm --filter esconfig add",
     "add:server-utils": "pnpm --filter server-utils add",
-    "add:tsconfig": "pnpm --filter tsconfig add"
+    "add:tsconfig": "pnpm --filter tsconfig add",
+    "deploy:prod":"pnpm sst deploy --stage prod",
+    "deploy:dev":"pnpm sst deploy --stage dev",
+    "remove:prod":"pnpm sst remove --stage prod",
+    "remove:dev":"pnpm sst remove --stage dev"
   },
   "dependencies": {
     "sst": "4.3.0"

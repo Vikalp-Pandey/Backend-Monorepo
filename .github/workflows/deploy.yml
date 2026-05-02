@@ -58,7 +58,7 @@ jobs:
 
       # Deploy Frontend (using SST as defined in your sst.config.ts)
       - name: Deploy Frontend
-        run: pnpm sst deploy --stage prod
-        
+        run: pnpm deploy:prod
+
 
 
