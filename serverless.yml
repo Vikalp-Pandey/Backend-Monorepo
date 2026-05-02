@@ -1,0 +1,41 @@
+service: storex-api
+
+frameworkVersion: "3"
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-esbuild
+
+# Just point to the env file — all vars auto-injected into Lambda
+custom:
+  dotenv:
+    path: .env.production
+    exclude:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_REGION
+      
+  esbuild:
+    bundle: true
+    minify: true
+    sourcemap: true
+    platform: node
+    target: node20
+    packager: pnpm
+    format: esm
+    banner:
+      js: "import { createRequire } from 'module'; const require = createRequire(import.meta.url);"
+    outputFileExtension: .mjs
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: eu-north-1
+  timeout: 60
+  memorySize: 512
+
+functions:
+  api:
+    handler: apps/api/src/lambda.handler
+    events:
+      - httpApi: "*"
