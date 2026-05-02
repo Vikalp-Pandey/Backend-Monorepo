@@ -54,8 +54,10 @@ jobs:
 
       # Deploy Backend (Serverless Framework)
       - name: Deploy Backend
-        run: pnpm dlx serverless deploy --stage prod
+        run: pnpm dlx serverless deploy --stage dev
 
       # Deploy Frontend (using SST as defined in your sst.config.ts)
       - name: Deploy Frontend
         run: pnpm sst deploy --stage prod
+
+
